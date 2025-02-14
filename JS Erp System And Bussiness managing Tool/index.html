@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magwast Managment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <noscript>
+        <h1>Please Enable the Coookies</h1>
+
+        <style>
+            h1 {
+                font-family: sans-serif, cursive;
+                text-align: center;
+                color: red;
+            }
+
+            .webpage {
+                display: none;
+            }
+        </style>
+
+    </noscript>
+
+</head>
+
+<body>
+
+    <div class="webpage">
+        <div class="container">
+            <center>
+                <img src="images/logo.jpg" alt="">
+                
+                <h1>Magwast</h1>
+                <span id="typewriter"></span> <br>
+                <i class="fa fa-play-circle-o animated infinite swing" style="font-size:60px;color:black;margin-top:10px;cursor:pointer" onclick="sidebar()"></i>
+             </center>
+        </div>
+        
+        <div class="sidebar">
+            <i class="fa fa-close" style="float:right;color:white;background-color:black;padding:5px;cursor:pointer;margin: 14px;" onclick="sidebar_close()"></i>
+            <br>
+            <h1>Login User!</h1>
+
+            <form action="" onsubmit="return login()">
+                <input type="text" id="sign-username" placeholder="&#xf2bd; email" required>
+                <br>
+                <input type="password" id="sign-password" placeholder="&#xf023; Password" required>
+                <br>
+                <input type="submit" value="Login" id="sign-submit" >
+
+                <br>
+            </form> 
+                <h1>SignUp User ?</h1>
+                
+            <form onsubmit="return signup()">
+                <input type="text" id="username" placeholder="&#xf2bd; username" required="required">
+                <br>
+                <input type="password" id="password" placeholder="&#xf023; Password" required="required">
+                <br>
+                <input type="email" id="email" class="animated" placeholder="&#xf0e0; Email" required="required" onchange="incorrect()" >
+                <span id="already-existed" class="spans"></span>
+
+                <input type="number" name="" id="phone" placeholder="&#xf095; Phone Number" required="required">
+                <br>
+                <input type="submit" value="Sign Up" id="submit">
+                <span id="login-result" class="spans"></span>
+            </form>
+        </div>
+    </div>
+<script src="js/functionality.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const text = "One Solution For All Your Business Problems";
+    const typewriterElement = document.getElementById("typewriter");
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            typewriterElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    typeWriter();
+});
+</script>
+</body>
+
+</html>

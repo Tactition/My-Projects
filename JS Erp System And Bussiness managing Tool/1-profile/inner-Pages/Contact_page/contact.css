@@ -1,0 +1,525 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(42, 204, 255, 1) 0%, rgba(255, 50, 58, 1) 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 22px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#brand-logo {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 44px;
+    stroke: 2px;
+    padding: 12px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#user-name {
+    font-family: cursive;
+    font-size: 34px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+#main {
+    width: 100%;
+    height: calc(90vh - 100px);
+    border: 1px solid black;
+}
+
+.back-btn {
+    background-color: #00c3ff;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 4px;
+    border: 1px solid #ffffff;
+    box-shadow: 1px 1px 2px 1px #fff;
+
+
+}
+
+.back-btn>button {
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    float: left;
+    box-shadow: 0 2px 4px 0 white;
+}
+
+.back-btn {
+    order: 0;
+}
+
+.con-head {
+    text-align: center;
+    flex: 1;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+.sidebar {
+    position: relative;
+    width: 40%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    float: right;
+    background-color: #00000077;
+
+
+}
+
+.head-sidebar {
+    box-shadow: 0 2px 4px 0 white;
+    padding: 4.5px;
+    position: sticky;
+    top: 0;
+    background-color: unset;
+}
+
+
+.contact {
+    width: 60%;
+    float: left;
+}
+
+/* form container */
+
+#login-form {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+#s-contact {
+    width: 400px;
+    height: auto;
+    padding: 26px 32px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#s-contact::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF7466;
+    opacity: 100%;
+    position: relative;
+    top: -40px;
+    left: -45px;
+}
+
+#s-contact::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF7466;
+    opacity: 100%;
+    position: relative;
+    top: 38px;
+    left: 355px;
+
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    filter: drop-shadow(2px 2px 4px #006eff);
+}
+
+#login-form input[type="text"],
+#login-form input[type="number"],
+#login-form input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: none;
+    height: 32px;
+    outline: #006eff;
+}
+
+#login-form input[type="button"] {
+    width: 100%;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#login-form input[type="button"]:hover {
+    background-color: #45a049;
+    transform: scale(0.98);
+}
+
+#saved {
+    display: block;
+    font-size: 18px;
+    margin: 10px;
+    color: yellow;
+    font-family: 'poppins';
+    text-transform: capitalize;
+    font-weight: 800;
+    display: none;
+
+}
+
+/* restorer */
+#restorecontact {
+    display: none;
+    width: 60%;
+    height: 74vh;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10000;
+
+}
+
+#restorecontact h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#restoretable th,
+#restoretable td,
+#restoretable {
+    border-collapse: separate;
+}
+
+#restoretable th,
+#restoretable td {
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+    border-color: #96D4D4;
+
+}
+
+#close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: red;
+    font-size: 22px;
+}
+
+/*  */
+
+#contacts-container {
+    width: 90%;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    overflow-y: scroll;
+}
+
+#contacts-container::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 14px;
+    background-color: #dddddd1f;
+
+}
+
+#contacts-container::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+fieldset {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 12px;
+}
+
+legend {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: yellow;
+    text-transform: capitalize;
+}
+
+ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#delete-btn {
+    color: yellow;
+    font-size: 18px;
+    float: right;
+}
+
+li {
+    color: white;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin: 2px;
+    width: auto;
+
+}
+
+/* form container */
+
+
+/* sidebar contact */
+
+#s-search {
+    width: 60%;
+    height: 32px;
+    margin: 10px 20%;
+    border-radius: 20px;
+    border: none;
+    padding: 8px;
+    display: none;
+}
+
+.sidefoot {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 6px;
+
+}
+
+.sidefoot span {
+    margin: 0 4px;
+    font-family: sans-serif;
+}
+
+#side-btn {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+
+}
+
+#footer-tag {
+    font-family: 'Montserrat', cursive;
+    float: left;
+    color: white;
+    font-size: 24px;
+    margin: 16px 2px;
+    filter: drop-shadow(2px 2px 4px #ffffff);
+}
+
+#footer-tag a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+
+    /* Adjust header and logo */
+    header {
+        height: 80px;
+    }
+
+    #brand-logo {
+        font-size: 36px;
+    }
+
+    /* Adjust main section */
+    #main {
+        height: calc(90vh - 80px);
+    }
+
+    /* Adjust sidebar */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Adjust contact form */
+    #login-form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+
+
+    /* Adjust restore contact */
+    #restorecontact {
+        width: 90%;
+        height: 60vh;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Adjust footer */
+    .footer {
+        height: 40px;
+    }
+
+    #footer-tag {
+        font-size: 18px;
+        margin: 10px 2px;
+    }
+}
+
+/* Tablet Responsive */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    /* Adjust header and logo */
+
+    .sidebar {
+        overflow: hidden;
+        position: fixed;
+        width: 80%;
+        height: 74%;
+        top: 80px;
+        left: 0px;
+        z-index: 1;
+        background-color: #9e9e9e;
+        z-index: 10;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #side-btn {
+        display: block;
+        float: right;
+        position: relative;
+        top: 0px;
+        right: 10px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        font-size: 18px;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .contacts-container fieldset ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #close {
+        top: 50px;
+        right: 10px;
+    }
+
+    #brand-logo{
+        font-size: 26px;
+    }
+
+    #restorecontact {
+        width: 80%;
+        height: 74vh;
+    }
+
+    #s-contact {
+        width: 250px;
+        margin: 0;
+        padding: 8px;
+    }
+
+    #s-contact::after,
+    #s-contact::before {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+
+    }
+
+    .con-head {
+        font-size: 16px;
+    }
+
+    #footer-tag {
+        font-size: 14px;
+    }
+}
