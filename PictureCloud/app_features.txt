@@ -1,0 +1,26 @@
+1. automatic password generate
+2. upload manager
+3. memory management system
+4. payment gateway
+5. email system	
+6. ajax techniques
+
+
+
+password posiblities
+---------------------------------
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+`~!@#%^&*()_+-=/\;:"'<?,.>
+
+
+pattern
+---------------------------------------
+GA0a!b1|cBdN@efg2hCiH3`jkD#lP4OmM%n^JVo\Q5pRE_<q=)SIK9rs6&tT*uUF,L-(vZ/7w~Wx+8yX>zY
+
+
+
+
+
+

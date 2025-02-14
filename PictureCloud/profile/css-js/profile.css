@@ -1,0 +1,79 @@
+body {
+  background-color: #f2f2f2;
+}
+
+#noticeData{
+  color: #fff;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #343a40;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #ffffff !important;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+}
+
+.container-folder {
+  display: inline-block;
+}
+
+.container-folder .progress {
+  height: 5px;
+}
+
+.container-folder .progress-bar {
+  background-color: #007bff;
+}
+
+.container-folder .card-icons i {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container-folder .card-body {
+  display: flex;
+  align-items: center;
+}
+
+.container-folder .card-body .fa-folder,
+.container-folder .card-body .fa-picture-o,
+.container-folder .card-body .fa-stack-overflow {
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+
+/* gallery image */
+
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: fill;
+  margin: 2px; 
+  border:  2px solid #fff;
+}
+
+.gallery .card-body {
+  padding: 4px;
+}
+
+.gallery .image-title{
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
