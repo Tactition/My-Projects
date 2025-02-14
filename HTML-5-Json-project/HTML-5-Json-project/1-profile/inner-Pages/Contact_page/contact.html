@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacts</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="/java-script-Projects/HTML 5 Json/css/animate.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="blocker">
+    <header>
+      <span id="brand-logo">Magwast Network Managment</span>
+      <div class="profile">
+        <span id="user-name"> </span>
+        <img id="user-img">
+      </div>
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <div class="back-btn">
+          <button onclick="history.go(-1)">
+            <i class="fa fa-long-arrow-left" id="back"></i>
+          </button>
+        </div>
+        <h1 class="con-head">Private Contact</h1>
+      </div>
+      <!-- Contact Form -->
+      <div class="sidebar">
+        <div class="head-sidebar">
+          <h1 class="con-head">Contact list</h1>
+        </div>
+        <form action="" id="s-form">
+          <input type="search" id="s-search" placeholder="Search here" oninput="search(this)" />
+        </form>
+
+        <div class="contacts-container" id="contacts-container">
+
+        </div>
+
+        <div class="sidefoot">
+          <span id="hiding" onclick="restorecontact()"><i class="fa fa-refresh" id="refresh"> </i> Restore Contact</span>
+          <span onclick="logout()"><i class="fa fa-times" id="add"></i> Log-Out</span>
+        </div>
+
+      </div>
+
+      <div id="restorecontact">
+        <h1 id="noticeheading"></h1>
+
+        <table width="80%" align="center" id="restoretable">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Restore</th>
+          </tr>
+        </table>
+
+        <i class="fa fa-times-circle" id="close" onclick="closeit()"></i>
+
+      </div>
+
+      <div class="contact">
+        <i class="fa fa-bars" id="side-btn"></i>
+        <div id="login-form">
+          <form method="post" id="s-contact">
+            <label for="username">Full Name:</label>
+            <input type="text" id="username" required="required" name="username" /><br />
+            <label for="p-email">Email:</label>
+            <input type="email" name="p-email" required="required" id="p-email" /><br />
+            <label for="p-number">Primary Number:</label>
+            <input type="number" id="p-number" required="required" name="p-number" /><br />
+            <input type="button" value="Save" onclick="add_contact()" />
+            <span id="saved"><i class="fa fa-check"></i> Contact Saved..
+            </span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p id="footer-tag">Designed And Developed By <b><a href="https:///t.me/tactition"> @tactition</a></b></p>
+    </section>
+  </div>
+  <script src="contact.js"></script>
+</body>
+
+</html>

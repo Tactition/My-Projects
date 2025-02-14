@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness</title>
+    <link rel="stylesheet" href="css/business-only.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/animate.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+    <!-- essential for Generating pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="blocker">
+        <header>
+            <span id="brand-logo"><b>Magwast</b> <b>M</b>anagment <b>S</b>ystem</span>
+            <div class="profile">
+                <div class="user-log">
+                    <span id="user-name"></span> <br>
+                    <span id="logout">Logout</span>
+                </div>
+                <img id="user-img">
+            </div>
+        </header>
+
+        <section id="main">
+
+            
+            <div class="work-area">
+                <i class="fa fa-bars" id="side-btn"></i>
+                
+                <div class="work-header">
+
+                    <div class="work-top-head" style="flex-direction: column;">
+                        <span id="company-Email"></span>
+                        <span id="company-phone"></span>
+                    </div>
+
+                    <div class="work-top-head">
+                        <img src="" alt="" srcset=" " id="work-brand-logo"> &nbsp;&nbsp;
+                        <span id="work-brand-name"></span>
+                    </div>
+
+                    <div class="work-top-head" style="flex-direction: column;">
+                        <span id="company-address"></span>
+                        <span id="company-fax"></span>
+                    </div>
+
+                </div>
+
+                <div class="dynamic-content">
+
+                    <div class="option-box" id="ist-wrapper">
+                        <i class="fa fa-close" id="close-measure" onclick="ist_close()"></i>
+                        <form id="measure-form" class="wrapper-form" onsubmit="unitmeasure()">
+                            <h1>Unit Of Measure</h1>
+                            <img src="../images/measure.png" alt="">
+                            <hr width="70%"><br>
+                            <label for="symbol-measure">symbol Measure</label>
+                            <input type="text" id="symbol-measure" name="symbol-measure" required="required"
+                                placeholder="symbol" maxlength="2" />
+
+                            <label for="symbol-name">symbol Name</label>
+                            <input type="text" id="symbol-name" name="symbol-name" required="required"
+                                placeholder="symbol name" />
+
+                            <input type="submit" value="Save" />
+                        </form>
+
+                        <select id="select-unit">
+                            <option >Select Unit</option>
+                        </select>
+                        
+                        <input type="button" value="Delete" id="delete-unit">
+                        <br>
+                        <span id="notice-unit"></span> 
+
+                    </div>
+
+                    <!-- 2nd wrapper -->
+
+                    <div class="option-box" id="sec-wrapper">
+                        <i class="fa fa-close" id="close-measure" onclick="sec_close()"></i>
+                        <form id="tax-form" class="wrapper-form">
+                            <h1>Tax Percent Setup</h1>
+                            <img src="../images/tax setup.png" alt="">
+                            <hr width="70%"><br>
+                            <label for="tax-name">Tax Name</label>
+                            <input type="text" id="tax-name" required="required" placeholder="name" />
+
+                            <label for="tax-percent">Percent</label>
+                            <input type="text" id="tax-percent" name="text-percent" required="required"
+                                placeholder="Percent" maxlength="3" />
+
+                            <input type="submit" value="Save" onclick="" />
+                        </form>
+                        
+                        <select id="select-tax">
+                            <option >Select Tax</option>
+                        </select>
+                        
+                        <input type="button" value="Delete" id="delete-tax">
+                        <br>
+                        <span id="notice-tax"></span> 
+
+                    </div>
+
+
+                    <!-- 3rd wrapper -->
+
+                    <div class="sales-voucher" id="third-wrapper">
+
+                        <table>
+                            <thead id="ist-row">
+                                <tr>
+                                    <td id="dynamic-voucher-number">
+                                        <button id="delete-voucher" class="voucher-btn">Delete Voucher</button>
+                                    </td>
+
+                                    <td>
+                                        <button id="voucher-popup-btn">Popup Voucher</button>
+                                    </td>
+
+                                    <td colspan="2">
+                                        <button id="close-voucher" class="voucher-btn" onclick="closevoucher()">Close
+                                            Voucher</button>
+                                    </td>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr id="second-row">
+                                    <td width="60%" id="voucher-number"> </td>
+                                    <td id="voucher-date">Date : </td>
+                                    <td id="voucher-time" colspan="2">Time :</td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2" id="voucher-details">
+                                        <span id="voucher-company"></span> <br>
+                                        <span id="voucher-address">Venue : </span> <br>
+                                        <span id="voucher-phone">Call +91 </span> <br>
+                                    </td>
+
+
+                                    <td style="position: relative;" colspan="2">
+                                        <img id="voucher-logo">
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <form id="voucher-form">
+
+                            <div class="row">
+                                <label for="vouchername">Name</label>
+                                <input type="text" id="vouchername" required>
+
+                                <label for="voucheremail">Email</label>
+                                <input type="text" id="voucheremail">
+                            </div>
+
+                            <div class="row">
+                                <label for="voucheraddress">Address</label>
+                                <input type="text" id="voucheraddress">
+
+                                <label for="voucherphone">Phone</label>
+                                <input type="number" id="voucherphone" required>
+                            </div>
+
+                        </form>
+
+                        <table id="product-table">
+                            <tbody>
+                                <tr id="third-row">
+                                    <td width="220px">Description</td>
+                                    <td width="160px">Price</td>
+                                    <td width="120px">Quantity</td>
+                                    <td width="80px">Unit</td>
+                                    <td width="200px">Total Amount</td>
+                                    <td width="50px">Del</td>
+                                </tr>
+                                <!-- dynamic table will be Created here -->
+                            </tbody>
+                        </table>
+
+                        <button id="add-product">
+                            <i class="fa fa-plus-square"></i>
+                            Add item
+                        </button>
+
+                        <table id="calc-table">
+                            <tr>
+                                <td width="60%"></td>
+                                <td width="120px">Sub-Total</td>
+                                <td width="200px" id="total-voucher-amount">
+                                    <i class="fa fa-rupee"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="4"></td>
+                                <td id="voucher-tax-name"></td>
+                                <td id="voucher-tax-amount">
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Total</td>
+                                <td id="voucher-grand-total">
+                                    <i class="fa fa-rupee"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Paid</td>
+                                <td>
+                                    <i class="fa fa-rupee"></i>
+                                    <input type="number" id="voucher-paid-balance">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Balance Dues</td>
+                                <td id="voucher-dues">
+                                    <i class="fa fa-rupee"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td id="pdf-insert"></td>
+                                <td> <button id="get-bill-btn" class="last-btns">Get Bill</button></td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <!--end  wrapper -->
+
+                </div>
+            </div>
+
+            <div class="menu-area">
+
+                <div class="search-area">
+                    <label for="search_voucher">Search Voucher : </label>
+                    <input type="number" id="search_voucher" placeholder="Enter The Voucher Number">
+
+                    <div class="dropdown" id="dropdown">
+
+                    </div>
+                </div>
+
+                <div class="wrappers" id="ist-menu">
+                    <div class="button">
+                        <i class="fa fa-balance-scale"></i>
+                        <span>Unit Of Measure</span>
+                    </div>
+                </div>
+
+
+                <div class="wrappers" id="sec-menu">
+                    <div class="button">
+                        <i class="fa fa-calculator"></i>
+                        <span>Tax Setup</span>
+                    </div>
+                </div>
+
+
+                <div class="wrappers" id="third-menu">
+                    <div class="button">
+                        <i class="fa fa-money"></i>
+                        <span>Sales Voucher</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="fourth-menu">
+                    <div class="button">
+                        <i class="fa fa-close"></i>
+                        <span>Shut Company</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="footer">
+            <!-- <img src="../../../images/logo.png" alt="" id="footer-img" /> herukoaccount1@  -->
+
+            <p id="footer-tag">Designed And Developed By <b><a href="https:///t.me/tactition"> @tactition</a></b></p>
+        </section>
+
+    </div>
+
+    <script src="js/business-only.js"></script>
+
+</body>
+
+</html>

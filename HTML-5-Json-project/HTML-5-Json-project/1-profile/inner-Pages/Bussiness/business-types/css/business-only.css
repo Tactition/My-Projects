@@ -1,0 +1,712 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 74px;
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 72, 0, 0.5);
+}
+
+#brand-logo {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 32px;
+    stroke: 2px;
+    padding: 4px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.user-log {
+    padding: 14px 2px;
+}
+
+#user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#user-name {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+#logout {
+    float: right;
+    font-size: 12px;
+    color: #525252;
+    font-family: sans-serif;
+    cursor: pointer;
+
+}
+
+
+#main {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+/* left area of workplace */
+.work-area {
+    width: 60%;
+    height: auto;
+    background: #f7f0f0;
+    padding: 2px;
+    display: block;
+}
+
+.work-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(245, 229, 220);
+    padding: 8px;
+}
+
+.work-top-head {
+    width: 226px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    position: relative;
+    /* Add position relative for positioning the line */
+}
+
+.work-top-head::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Position the line at the center vertically */
+    height: 40px;
+    /* Height of the line, adjust as needed */
+    width: 1px;
+    /* Width of the line */
+    background-color: #5c5c5c;
+    /* Color of the line */
+    right: -20px;
+    /* Position the line to the right of the .work-top-head element */
+    transform: translateY(-50%);
+    /* Adjust vertical alignment */
+}
+
+.work-top-head:last-child::after {
+    content: none;
+}
+
+#side-btn {
+    display: block;
+    float: right;
+    position: relative;
+    top: 12px;
+    right: 10px;
+}
+
+.dynamic-content {
+    width: 100%;
+    height: calc(100% - 66px);
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.option-box {
+    display: none;
+    width: 320px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+#close-measure {
+    float: right;
+    position: relative;
+    top: -10px;
+    right: -5px;
+}
+
+.wrapper-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-form h1 {
+    color: #007bff;
+}
+
+.wrapper-form img {
+    width: 90px;
+    height: 90px;
+}
+
+.wrapper-form label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-family: sans-serif;
+}
+
+.wrapper-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.wrapper-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wrapper-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#work-brand-logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 4px groove #41A2FC;
+}
+
+#work-brand-name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+#sec-wrapper select {
+    width: 70%;
+    height: 30px;
+    padding: 4px;
+    margin: 10px 0;
+    display: none;
+
+}
+
+
+#ist-wrapper select {
+    width: 70%;
+    height: 30px;
+    padding: 4px;
+    margin: 10px 0;
+    display: none;
+}
+
+
+
+#delete-tax {
+    width: auto;
+    display: none;
+    height: 30px;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete-unit {
+    width: auto;
+    display: none;
+    height: 30px;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sales-voucher {
+    width: 100%;
+    height: calc(100% - 0px);
+    background-color: white;
+    overflow-y: scroll;
+    box-shadow: 1px 1px 2px 4px #ccc;
+    border: 1px solid black;
+    padding: 12px;
+    display: none;
+
+    /* width: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 100; */
+}
+
+.voucher-popup-active {
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+}
+
+
+.sales-voucher::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 10px;
+}
+
+.sales-voucher::-webkit-scrollbar-thumb {
+    background-color: #41A2FC;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.sales-voucher::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+    padding: 6px;
+    /* border: 1px solid black; */
+}
+
+.voucher-btn {
+    padding: 8px;
+    background-color: white;
+    float: right;
+    box-shadow: 1px 1px 6px 1px #ccc;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+#delete-voucher {
+    float: left;
+    display: none;
+}
+
+
+#voucher-details {
+    line-height: 24px;
+}
+
+#voucher-company {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    background-image: linear-gradient(45deg, #99e9a5 0%, #3847ef 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#voucher-address,
+#voucher-phone {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#voucher-logo {
+    position: absolute;
+    height: 82px;
+    width: 84px;
+    top: 0px;
+    right: 4px;
+    border-radius: 50%;
+}
+
+#second-row {
+    background-color: #000000;
+    color: white;
+}
+
+#second-row :nth-child(2),
+#second-row :nth-child(3) {
+    background-color: #0056b3;
+    text-align: center;
+}
+
+#voucher-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#voucher-form .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 12px;
+}
+
+#voucher-form label {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 4px 2px;
+}
+
+#voucher-form input {
+    display: block;
+    border-radius: 6px;
+    border: 1px solid black;
+    outline: none;
+    text-transform: capitalize;
+    width: calc(100% - 20px);
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+#third-row {
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#product-table {
+    height: auto;
+    width: 100%;
+}
+
+#product-table input {
+    width: 100%;
+    height: 28px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #7a7a7a;
+}
+
+#product-table input[type="number"]::-webkit-inner-spin-button,
+#product-table input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#product-table td {
+    border: 1px solid black;
+}
+
+#add-product {
+    padding: 8px;
+    display: block;
+    background: white;
+    border: 1px solid #323232;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0px;
+    cursor: pointer
+}
+
+.unit {
+    width: 100%;
+    height: 30px;
+    text-transform: capitalize;
+}
+
+#product-table .fa {
+    font-size: 26px;
+    text-align: center;
+    padding: 4px;
+
+}
+
+#calc-table {
+    border: 1px solid black;
+}
+
+#calc-table td {
+    border: 1px solid black;
+    height: 22px;
+}
+
+#voucher-paid-balance {
+    width: 90%;
+    display: inline;
+    height: 24px;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+#notice-tax {
+    font-family: sans-serif;
+    margin-top: 12px;
+}
+
+
+/* menu area of right */
+.menu-area {
+    width: 40%;
+    height: auto;
+    background: #ffffff;
+    padding: 10px 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+.wrappers {
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 0px 10px 10px 0px;
+    /* filter: drop-shadow(0px 12.5215520859px 10.017241478px rgba(0, 0, 0, 0.04)) drop-shadow(0px 22.336309433px 17.8690471649px rgba(0, 0, 0, 0.04)) drop-shadow(0px 41.7776107788px 33.422088623px rgba(0, 0, 0, 0.05)) drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07)); */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    float: left;
+
+}
+
+.menu-area .wrappers::before {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0px;
+    width: 4px;
+    height: 100%;
+    content: "";
+    background-image: linear-gradient(37deg, #99e9a5 0%, #3847ef 100%);
+    z-index: 11;
+}
+
+.button {
+    width: 90%;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button i {
+    font-size: 32px;
+
+}
+
+.button span {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 12px;
+}
+
+#voucher-popup-btn {
+    width: 100px;
+    height: 28px;
+    z-index: 100;
+    background-color: #007bff;
+    border: 1px solid black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.last-btns {
+    height: 28px;
+    width: 100px;
+    background: white;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 auto;
+
+}
+
+.search-area {
+    width: 100%;
+    height: 50px;
+    background-color: #f4f0f0;
+    border-radius: 22px;
+    padding: 3%;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#search_voucher {
+    height: 36px;
+    margin: 0 auto;
+    width: 60%;
+    outline: none;
+    border: 1px solid #F4F0F0;
+    border-radius: 12px;
+    padding: 4px;
+    text-align: center;
+
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    height: 38px;
+    width: 100%;
+    background-color: #F4F0F0;
+    top: 40px;
+    border-radius: 12px;
+
+}
+
+/* form area */
+
+
+.footer {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(255, 72, 0, 0.5);
+    display: flex;
+    justify-content: center;
+
+}
+
+#footer-tag {
+    font-family: 'Ubuntu', cursive;
+    float: left;
+    color: #000000;
+    font-size: 18px;
+    margin: 10px 2px;
+    filter: drop-shadow(2px 2px 4px #ffffff);
+    margin-top: 10px;
+
+}
+
+#footer-tag a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+#footer-img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    filter: drop-shadow(2px 2px 4px black);
+    margin: 8px;
+}
+
+/* media quaries */
+
+@media print {
+    #footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work-header {
+        display: none;
+    }
+
+    .menu-area {
+        width: 80%;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    #brand-logo {
+        font-size: 16px;
+    }
+
+    #side-btn {
+        display: block;
+        float: right;
+        position: sticky;
+        top: 12px;
+        right: 10px;
+    }
+
+    .sales-voucher{
+        width: 100%;
+    }
+    #product-table tr{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .wrappers {
+        height: 60px;
+        margin-bottom: 12px;
+    }
+    .search-area{
+        margin-bottom:18px;
+    }
+
+    .menu-area.active {
+        transform: translateX(0);
+    }
+
+    .work-area {
+        width: 100%;
+    }
+
+    .dynamic-content{
+        flex-direction: column;
+    }
+    #main{
+        min-height: 80vh;
+        height: auto;
+    }
+
+    #footer-tag {
+        font-size: 16px;
+    }
+}

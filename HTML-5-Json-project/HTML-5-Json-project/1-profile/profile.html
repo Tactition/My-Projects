@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../1-profile/css/profile.css">
+    <link rel="stylesheet" href="/java-script-Projects/HTML 5 Json/css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="blocker">
+        <div class="profile-upload" id="blocker">
+            <h1>Magwast</h1>
+
+            <div class="in-row">
+                <div class="upload" id="upload-btn">
+                    <i class="fa fa-upload" id="fa">upload Image</i>
+                    <input type="file" id="file-upload" accept="image/*" onchange="upload_pic()">
+                </div>
+
+                <div class="details">
+                    <h1 align="center" id="user_name"></h1>
+                    <p id="DOCS">Welome To Magwast Mangament System.This is Worlds safest Bussiness Managment
+                        Software.Our plateform
+                        will Save You Data in your Own Pc without uploading it any other third party webserver.
+                    </p>
+                </div>
+                <i id="forward_btn" class="fa fa-forward"></i>
+            </div>
+        </div>
+
+        <div class="app-content" id="app-content">
+
+            <header>
+                <span id="brand-logo">Magwast Managment</span>
+                <div class="profile">
+                    <div class="user-log">
+                        <span id="user-name"></span> <br>
+                        <span id="logout">Logout</span>
+                    </div>
+                    <img id="user-img">
+                </div>
+            </header>
+
+            <section class="main-container">
+
+                <div class="wrapper" id="1st_app">
+                    <h2><i class="fa fa-briefcase"></i> Bussiness</h2>
+                    <p>Manage all Your Bussiness Transactions with full Security And Flexiblity</p>
+                    <i class="fa fa-long-arrow-right" id="fafa"></i>
+                </div>
+
+                <div class="wrapper" id="2nd_app">
+                    <h2><i class="fa fa-list-alt"></i> Playlist</h2>
+                    <p>Manage all Your Favourite Playlists with Fully Encrypted DataBase</p>
+                    <i class="fa fa-long-arrow-right" id="fafa"></i>
+                </div>
+
+                <div class="wrapper" id="3rd_app">
+                    <h2 id="3rd_app"><i class="fa fa-address-book"></i> Contacts</h2>
+                    <p>Fully Encrypted Phone Book To Manage all Your Interaction</p>
+                    <i class="fa fa-long-arrow-right" id="fafa"></i>
+                </div>
+
+                <div class="wrapper" id="4th_app">
+                    <h2><i class="fa fa-info-circle"></i> About Me</h2>
+                    <p>Learn More About us And Our terms and policies</p>
+                    <i class="fa fa-long-arrow-right" id="fafa"></i>
+                </div>
+
+            </section>
+
+            <section class="footer">
+                <p id="footer-tag">Designed And Developed By <a href="https:///t.me/tactition">@Tactition</a></p>
+            </section>
+        </div>
+    </div>
+    <script src="js/upload.js"></script>
+</body>
+
+</html>

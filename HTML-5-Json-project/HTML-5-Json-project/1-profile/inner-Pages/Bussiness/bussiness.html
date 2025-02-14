@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness</title>
+    <link rel="stylesheet" href="bussiness.css" type="text/css">
+    <link rel="stylesheet" href="../../../css/animate.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="blocker">
+        <header>
+            <span id="brand-logo"><b>Magwast</b> <b>M</b>anagment <b>S</b>ystem</span>
+            <div class="profile">
+                <div class="user-log">
+                    <span id="user-name"></span> <br>
+                    <span id="logout">Logout</span>
+                </div>
+                <img id="user-img">
+            </div>
+        </header>
+
+        <section id="main">
+
+            <div class="work-area">
+
+                <div class="create-company-work">
+                    <i class="fa fa-home"></i>
+                    <span>Create Company Profile</span><br>
+
+                    <div class="create-company-form">
+
+                        <form action="" id="create-form">
+
+                            <div class="form-data">
+                                <label for="company-name">Company Name and Alliance : </label>
+                                <br>
+                                <input type="text" id="company-name" required="required" placeholder="Company Name">
+                                <input type="text" id="company-mailing" required="required"
+                                    placeholder="company-mailing Name">
+
+                            </div>
+
+                            <div class="company-profile-upload">
+                                <label for="company-logo-file">Company Logo </label>
+                                <span id="company-logo" width="150px" height="150px" aria-placeholder="Company Logo"> </span>
+                                <input type="file" id="company-logo-file" required>
+                            </div>
+
+                            <div class="form-data">
+                                <label for="company-address">Contact Details : </label>
+                                <br>
+                                <input type="text" id="company-address" required="required"
+                                    placeholder="Company Address">
+                                <input type="text" id="company-fax" placeholder="Company Fax">
+                                <br>
+                                <input type="tel" id="company-phone" required="required" placeholder="Company-Phone ">
+                                <input type="email" id="company-email" placeholder="Company-Email "><br>
+                                <input type="text" id="company-website" required="required" placeholder="Company-Website ">
+                            </div>
+
+                            <div class="form-data">
+                                <label for="company-fianancial-year">Fianacial Year : </label>
+                                <input type="date" id="company-fianancial-year" required="required"
+                                    placeholder="Company fianancial-year">
+                            </div>
+
+                            <div class="form-data">
+                                <label for="stock-type">Stock Type : </label>
+                                <select name="stock-type" id="stock-type">
+                                    <option value="Account-Only">Account Only</option>
+                                    <option value="Account-Inventory">Account With Inventory</option>
+                                </select>
+                            </div>
+
+                            <input type="submit" value="Create Company">
+
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menu-area">
+
+                <div class="create-company main-buttons">
+                    <i class="fa fa-home" id="fafa-create"></i>
+                    <button id="create-btn">Create Company</button>
+                </div>
+
+                <span id="notice"></span>
+
+                <br>
+                <div class="delete-company main-buttons">
+                    <i class="fa fa-trash"></i>
+                    <button id="create-btn">Delete Company</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="footer">
+            <!-- <img src="../../../images/logo.png" alt="" id="footer-img" /> -->
+            <p id="footer-tag">Designed And Developed By <b><a href="https:///t.me/tactition"> @tactition</a></b></p>
+        </section>
+
+    </div>
+
+    <script src="bussiness.js"></script>
+</body>
+
+</html>

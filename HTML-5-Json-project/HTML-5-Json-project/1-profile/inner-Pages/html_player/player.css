@@ -1,0 +1,471 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(42, 204, 255, 1) 0%, rgba(255, 50, 58, 1) 100%);
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 22px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#brand-logo {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 44px;
+    padding: 12px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#user-name {
+    font-family: cursive;
+    font-size: 34px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+/* header ends here */
+
+.main-container {
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+
+}
+
+.top-header {
+    width: 100%;
+    height: 30px;
+    background: #121010;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid white
+}
+
+.back-btn {
+    display: inline;
+    width: 33%;
+}
+
+#back-txt {
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #868686;
+    font-family: sans-serif;
+
+}
+
+#back-txt i {
+    font-size: 24px;
+    margin: 0;
+}
+
+#player-title {
+    display: inline;
+    color: #e5e5e5ad;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 10;
+}
+
+.player_playlist {
+    width: 100%;
+    display: flex;
+}
+
+.player {
+    width: 75%;
+    height: 520px;
+    background: #000000;
+    position: relative;
+}
+
+#play-next {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: orange;
+    padding: 4px;
+    border-radius: 4px;
+    display: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#input-file {
+    position: absolute;
+    display: block;
+    top: 140px;
+    left: 200px;
+    width: 650px;
+    height: 200px;
+    opacity: 0;
+}
+
+#youtube-link {
+    position: absolute;
+    display: block;
+    width: 40%;
+    height: 30px;
+    margin: 0 auto;
+    top: 100px;
+    left: 330px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+
+#video-player {
+    height: 100%;
+    width: 100%;
+}
+
+.controls {
+    width: 100%;
+    height: 35px;
+    background-color: #303636;
+    position: relative;
+    top: -38px;
+
+    opacity: 0.7;
+    box-shadow: 0px -6px 18px 0px #5c5c5c;
+    font-size: 28px;
+    padding: 2px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    display: none;
+}
+
+.player:hover .controls,
+.player:hover #play-next {
+    display: flex;
+}
+
+.controls i {
+    margin-left: 10px;
+}
+
+.cont-prog {
+    width: 420px;
+    height: 22px;
+    display: inline-block;
+    background: white;
+    margin: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    position: relative;
+
+    text-align: center;
+    color: #5eff00;
+    font-size: 14px;
+    text-align: center;
+}
+
+#progress-percent {
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    margin-top: 3px;
+    z-index: 100000;
+}
+
+#progress {
+    height: 100%;
+    width: 1%;
+    background-color: black;
+    position: absolute;
+}
+
+#buffer-progress {
+    display: block;
+    position: absolute;
+    background-color: #ec3b3b;
+    height: 100%;
+    width: 0%;
+
+}
+
+.cont-misc {
+    width: 200px;
+}
+
+#volume-slider {
+    width: 100px;
+    position: absolute;
+    top: -20px;
+    right: 120px;
+    display: none;
+}
+
+.setting-icon {
+    display: inline;
+}
+
+.menu {
+    display: none;
+    width: 160px;
+    position: absolute;
+    background-color: #1C1C1C;
+    border: 1px solid rgb(255, 255, 255);
+    bottom: 44px;
+    right: 12px;
+    padding: 4px 10px;
+    transition: transform 0.3s ease;
+}
+
+#reset {
+    width: auto;
+    outline: none;
+    border: none;
+    border-radius: 18px;
+}
+
+#reset-theme {
+    border: 1px solid;
+    border-image: linear-gradient(to right, #746c6c 25%, #fdfd49 25%, #ecec3b 50%, #e74b4b 50%, red 75%, teal 75%) 5;
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+#speed {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+#playback-slider {
+    margin: 0 auto;
+}
+
+#setting-list {
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+    margin: 2px 0;
+}
+
+#setting-list li {
+    color: white;
+    padding: 4px 0;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+#setting-list li input[type=color] {
+    width: 25px;
+    height: 25px;
+}
+
+.cont-btn,
+.cont-time,
+.cont-prog,
+.cont-misc {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#download-icon {
+    font-size: 24px;
+    margin: 0;
+}
+
+.mini-player {
+    display: none;
+    background-color: #ffffff;
+    position: fixed;
+    height: 0px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    margin: 0;
+    width: min-content;
+    z-index: 10000;
+}
+
+.mini-player span {
+    padding: 2px;
+    margin: 0;
+    width: fit-content;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.mini-player i {
+    float: right;
+}
+
+.mini-player video {
+    width: 220px;
+    float: left;
+    clear: left;
+}
+
+.playlist {
+    width: calc(100% - 75%);
+    height: 520px;
+    border: 1px solid white;
+    background: #1C1C1C;
+}
+
+#playlist-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 16px;
+    font-size: 28px;
+    font-weight: 800;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+/* footer starts here */
+
+.footer {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+
+}
+
+#footer-tag {
+    font-family: 'Montserrat', cursive;
+    float: left;
+    color: white;
+    font-size: 24px;
+    margin: 16px 2px;
+    filter: drop-shadow(2px 2px 4px #ffffff);
+}
+
+#footer-tag a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+@media only screen and (max-width: 768px) {
+    .playlist {
+        display: none;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    #input-file {
+        width: 231px;
+        height: 110px;
+        top: 45px;
+        left: 35px;
+    }
+
+    #youtube-link {
+        position: absolute;
+        display: block;
+        width: 80%;
+        height: 30px;
+        margin: 0 auto;
+        top: 6px;
+        left: 35px;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        text-align: center;
+    }
+
+    header {
+        width: 100%;
+        height: 54px;
+    }
+
+    #brand-logo {
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .player {
+        width: 100%;
+        min-height: 370px;
+        height: auto;
+    }
+
+    .cont-prog{
+        width: 100%;
+    }
+
+    .cont-btn, .cont-time, .cont-prog, .cont-misc{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .controls {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+
+    #video-player {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer-tag {
+        font-size: 14px;
+    }
+}

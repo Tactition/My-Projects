@@ -1,0 +1,442 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 74px;
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 72, 0, 0.5);
+}
+
+#brand-logo {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 32px;
+    stroke: 2px;
+    padding: 4px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.user-log{
+    padding: 14px 2px;
+}
+
+#user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#user-name {
+    font-family:"Ubuntu",sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+#logout{
+    float: right;
+    font-size: 12px;
+    color: #525252;
+    font-family: sans-serif;
+    cursor: pointer;
+    
+}
+
+
+#main{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+/* menu area of buttons */
+
+.menu-area{
+    width: 40%;
+    min-height: 80vh;
+    height: auto;
+    background: #ffffff;
+    padding: 4%;
+    
+}
+
+.main-buttons{
+    width: 400px;
+    height: 60px;
+    border: 2px solid #41a2fc;
+}
+
+.main-buttons i {
+    width: 64px;
+    font-size: 40px;
+    color: white;
+    background: #41a2fc;
+    padding: 8px;
+    float: left;
+    text-align: center;
+}
+
+.main-buttons button{
+    width:calc(100% - 65px);
+    height: 100%;
+    font-size: 22px;
+    font-family: Ubuntu,sans-serif;
+    text-align: center;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.delete-company{
+    display: none;
+}
+
+#notice{
+    height: 20px;
+    /* display:none; */
+    font-family: sans-serif;
+    font-size: 14px;
+    color: rgb(255, 73, 73);
+    padding: 4px;
+    /* background-color: #4b4a4a; */
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/* left area of workplace */
+
+
+.work-area{
+    width: 60%;
+    height: auto;
+    background: #f7f0f0;
+    padding: 2%;
+    display: block;
+}
+
+/* form area */
+
+.create-company-work{
+    display: none;
+    width: 100%;
+    height: 0;
+}
+
+.create-company-work span{
+    font-size: 22px;
+    font-family: 'Montserrat',cursive;
+
+}
+.create-company-work i{
+    font-size: 28px;
+    color: #41a2fc;
+}
+
+.create-company-form{
+    width: 100%;
+    min-height: 400px;
+    margin: 12px;
+    background: #F8F8F8;
+    border-radius: 22px;
+    padding: 12px;
+}
+
+.form-data{
+    width: 100%;
+    padding: 12px;
+}
+
+.form-data label{
+    font-size: 16px;
+    font-family: 'Montserrat',cursive;
+    font-weight: 600;
+    margin-bottom:12px;
+}
+
+.form-data input{
+    width: 220px;
+    height: 20px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: 'Montserrat',cursive;
+    margin-top: 4px;
+}
+
+.company-profile-upload{
+    position: relative;
+    display: block;
+    float: right;
+    right:50px ;
+    top:-70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid #41a2fc; */
+    padding: 22px;
+    border-radius: 22px;
+}
+
+#company-logo{
+    width: 150px;
+    height:150px;
+    border-radius: 20%;
+    border: 1px solid #41a2fc;
+    margin-bottom: 12px;
+}
+
+.company-profile-upload label{
+    font-size: 18px;
+    font-family: 'Montserrat',cursive;
+    margin: 8px 0;
+    color: #41a2fc;
+    font-weight: 800;
+}
+
+.company-profile-upload img{
+    border-radius: 10%;
+    margin: 8px 0;
+}
+
+.company-profile-upload input{
+    width: 89px;
+ 
+}
+
+
+#company-website{
+    width: 444px;
+    padding: 12px;
+    text-align: center;
+}
+
+#stock-type{
+    width: 240px;
+    height: 30px;
+}
+
+form input[type=submit]{
+    width: 120px;
+    height: 30px;
+    margin: 12px;
+    background: #41a2fc;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.footer{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(255, 72, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    
+}
+
+#footer-tag{
+    font-family: 'Ubuntu',cursive;
+    float: left;
+    color: #000000;
+    font-size:18px;
+    margin:10px 2px;
+    margin-top: 10px;
+
+}
+#footer-tag a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+#footer-img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    filter: drop-shadow(2px 2px 4px black);
+    margin: 8px;
+}
+
+/* media quaries */
+
+/*... (rest of the CSS code remains the same) */
+
+/* Media Queries */
+
+/* For mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    header {
+      height: 50px;
+      padding: 10px;
+    }
+    #brand-logo {
+      font-size: 20px;
+    }
+   .profile {
+      display: none;
+    }
+   .user-log {
+      padding: 10px 2px;
+    }
+    #user-img {
+      width: 30px;
+      height: 30px;
+    }
+    #main {
+      flex-direction: column;
+      min-height: 80vh;
+      height: auto;
+    }
+   .menu-area {
+      width: 100%;
+      padding: 2%;
+    }
+   .work-area {
+      width: 100%;
+      padding: 2%;
+      min-height: auto;
+    }
+    .create-company-work{
+        height: auto;
+    }
+   .create-company-form {
+      width: 90%;
+      margin: 10px;
+      height: auto;
+    }
+   .form-data {
+      flex-direction: column;
+    }
+   .form-data label {
+      margin-bottom: 10px;
+    }
+   .form-data input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+   .company-profile-upload {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+    #company-website{
+        width: 100%;
+    }
+    #company-logo {
+      width: 100px;
+      height: 100px;
+    }
+   .footer {
+      height: 40px;
+      padding: 10px;
+    }
+    #footer-tag {
+      font-size: 14px;
+    }
+  }
+  
+  /* For tablets (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    header {
+      height: 60px;
+      padding: 15px;
+    }
+    #brand-logo {
+      font-size: 24px;
+    }
+   .profile {
+      flex-direction: row;
+      align-items: center;
+    }
+
+   .user-log {
+      padding: 15px 2px;
+    }
+    #user-img {
+      width: 40px;
+      height: 40px;
+    }
+    #main {
+      flex-direction: column-reverse;
+    }
+    .main-buttons{
+        width: 100%;
+    }
+   .menu-area {
+      width: 100%;
+      padding: 2%;
+      height: auto;
+      min-height: auto;
+    }
+   .work-area {
+      width: 100%;
+      padding: 2%;
+    }
+   .create-company-form {
+      width: 100%;
+      margin: 4px;
+      float: left;
+    }
+   .form-data {
+      flex-direction: column;
+    }
+   .form-data label {
+      margin-bottom: 15px;
+    }
+   .form-data input {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+   .company-profile-upload {
+     float: none;
+     right: 10px;
+    top: -18px;
+
+    }
+    #company-logo {
+      width: 120px;
+      height: 120px;
+    }
+   .footer {
+      height: 50px;
+      padding: 4px;
+    }
+    #footer-tag {
+      font-size: 14px;
+    }
+  }

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness</title>
+    <link rel="stylesheet" href="css/business-inventory.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/animate.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+    <!-- essential for Generating pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="blocker">
+        <header>
+            <span id="brand-logo"><b>Magwast</b> <b>M</b>anagment <b>S</b>ystem</span>
+
+            <div class="bus-details">
+                <span style="color:white;"><B>Account-with-Inventory</B></span>
+                <div><span id="header-date">Date :</span> | <span id="header-time"></span></div>
+            </div>
+
+            <div class="profile">
+                <div class="user-log">
+                    <span id="user-name"></span> <br>
+                    <span id="logout">Logout</span>
+                </div>
+                <img id="user-img">
+            </div>
+        </header>
+
+        <section id="main">
+
+            <div class="work-area">
+                <div class="work-header">
+
+                    <div class="work-top-head" style="flex-direction: column;">
+                        <span id="company-Email"></span>
+                        <span id="company-phone"></span>
+                    </div>
+
+                    <div class="work-top-head">
+                        <img src="" alt="" srcset=" " id="work-brand-logo"> &nbsp;&nbsp;
+                        <span id="work-brand-name"></span>
+                    </div>
+
+                    <div class="work-top-head" style="flex-direction: column;">
+                        <span id="company-address"></span>
+                        <span id="company-fax"></span>
+                    </div>
+
+                </div>
+                
+                <i class="fa fa-bars" id="side-btn"></i>
+
+
+                <div class="dynamic-content">
+
+                    <div class="option-box" id="ist-wrapper">
+                        <i class="fa fa-close" id="close-measure" onclick="ist_close()"></i>
+                        <form id="measure-form" class="wrapper-form" onsubmit="unitmeasure()">
+                            <h1>Unit Of Measure</h1>
+                            <img src="../images/measure.png" alt="">
+                            <hr width="70%"><br>
+                            <label for="symbol-measure">symbol Measure</label>
+                            <input type="text" id="symbol-measure" name="symbol-measure" required="required"
+                                placeholder="symbol" maxlength="2" />
+
+                            <label for="symbol-name">symbol Name</label>
+                            <input type="text" id="symbol-name" name="symbol-name" required="required"
+                                placeholder="symbol name" />
+
+                            <input type="submit" value="Save" />
+                        </form>
+
+                        <select id="select-unit">
+                            <option>Select Unit</option>
+                        </select>
+
+                        <input type="button" value="Delete" id="delete-unit">
+                        <br>
+                        <span id="notice-unit"></span>
+
+                    </div>
+
+                    <!-- 2nd wrapper -->
+                    <div class="option-box" id="sec-wrapper">
+                        <i class="fa fa-close" id="close-measure" onclick="sec_close()"></i>
+                        <form id="tax-form" class="wrapper-form">
+                            <h1>Tax Percent Setup</h1>
+                            <img src="../images/tax setup.png" alt="">
+                            <hr width="70%" >
+                            <label for="tax-name">Tax Name</label>
+                            <input type="text" id="tax-name" required="required" placeholder="name" />
+
+                            <label for="tax-percent">Percent</label>
+                            <input type="text" id="tax-percent" name="text-percent" required="required"
+                                placeholder="Percent" maxlength="3" />
+
+                            <!-- radio buttons -->
+                            <div class="r-btns">
+                                <div>
+                                    <input type="radio" id="purchase-tax" name="tax-type" value="purchase-tax" required >
+                                    <label for="purchase-tax">Purchase Tax</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="sales-tax" name="tax-type" value="sales-tax">
+                                    <label for="sales-tax">Sales Tax</label>
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Save" onclick="" />
+                        </form>
+
+                        <select id="select-tax">
+                            <option>Select Tax</option>
+                        </select>
+
+                        <input type="button" value="Delete" id="delete-tax">
+                        <br>
+                        <span id="notice-tax"></span>
+
+                    </div>
+                    <!--end  wrapper -->
+                </div>
+            </div>
+
+            <div class="menu-area active">
+
+                <div class="wrappers" id="ist-menu">
+                    <div class="button">
+                        <i class="fa fa-balance-scale"></i>
+                        <span>Unit Of Measure</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="sec-menu">
+                    <div class="button">
+                        <i class="fa fa-calculator"></i>
+                        <span>Tax Setup</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="third-menu">
+                    <div class="button">
+                        <i class="fa fa-money"></i>
+                        <span>Vouchers</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="fifth-menu">
+                    <div class="button">
+                        <i class="fa fa-book"></i>
+                        <span>Ledger</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="sixth-menu">
+                    <div class="button">
+                        <i class="fa fa-line-chart"></i>
+                        <span>Stocks</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="seventh-menu">
+                    <div class="button">
+                        <i class="fa fa-area-chart"></i>
+                        <span>Profit And Loss</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="eighth-menu">
+                    <div class="button">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>Balance Sheet</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="nineth-menu">
+                    <div class="button">
+                        <i class="fa fa-exchange"></i>
+                        <span>Transaction</span>
+                    </div>
+                </div>
+
+                <div class="wrappers" id="fourth-menu">
+                    <div class="button">
+                        <i class="fa fa-close"></i>
+                        <span>Shut Company</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <section class="footer">
+            <!-- <img src="../../../images/logo.png" alt="" id="footer-img" /> herukoaccount1@  -->
+
+            <p id="footer-tag">Designed And Developed By <b><a href="https:///t.me/tactition"> @tactition</a></b></p>
+        </section>
+
+    </div>
+
+    <script src="js/account-with-inventory/bussiness-inventory.js"></script>
+    <script src="js/account-with-inventory/update.js"></script>
+
+</body>
+
+</html>
