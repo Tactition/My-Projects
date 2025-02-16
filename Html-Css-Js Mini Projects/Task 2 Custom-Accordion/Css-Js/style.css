@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+.accordion {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-title {
+  background: #8be72f;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-title:hover {
+  background: #b5dd47;
+}
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background: #f1f1f1;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.active .accordion-content {
+  display: block;
+  animation: fadeIn 0.7s ease-in-out, slideDown 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100px; 
+  }
+}
+.accordion-icon {
+  transition: transform 0.3s;
+  font-size: 16px;
+}
+.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .main-container {
+    width: 33%;
+  }
+}
+
+
+
+/*  Custom Accordion maker css */
+
+.dynamic-creation {
+  margin: 50px auto;
+  margin-top: 0;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.dynamic-creation h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+.dynamic-creation input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+}
+
+
+.dynamic-creation input::placeholder {
+  color: #999;
+}
+
+
+.dynamic-creation button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+
+.dynamic-creation button:hover {
+  background: #0056b3;
+}
+
+.dynamic-creation input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

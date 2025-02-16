@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery </title>
+  <link rel="stylesheet" href="Css-Js/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Image Gallery</h1>
+
+    <div class="filter-buttons">
+
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="nature">Nature</button>
+      <button class="filter-btn" data-category="cities">Cities</button>
+
+    </div>
+  </header>
+
+  <div class="gallery">
+    <img src="images/img-1.jpg" class="gallery-item nature all">
+    <img src="images/img-2.jpg" class="gallery-item nature all">
+    <img src="images/img-3.jpg" class="gallery-item nature all">
+    <img src="images/img-4.jpg" class="gallery-item cities all">
+    <img src="images/img-5.jpg" class="gallery-item cities all">
+    <img src="images/img-6.jpg" class="gallery-item cities all">
+  </div>
+
+  <div class="lightbox" style="display: none;">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <img class="lightbox-img" src="" alt="Lightbox Image">
+    <span class="next">&#10095;</span>
+  </div>
+
+  <script src="Css-Js/jquery.js"></script>
+  <script src="Css-Js/script.js"></script>
+</body>
+
+</html>
